@@ -105,13 +105,13 @@ while cap.isOpened():
 
         l = (int(math.sqrt((co[0][0] - co[1][0]) ** 2 * (co[0][1] - co[1][1]) ** 2)) - 150) // 2
         cv2.line(image, (int(xa), int(ya)), (int(xb), int(yb)), (195, 255, 62), 20)
-        if co[0][0] > co[1][0] and co[0][1]>co[1][1] and co[0][1] - co[1][1] > 55:
+        if co[0][5] > co[0][17] and co[0][6]>co[0][18] and co[0][5] - co[0][17] > 55:
             print("Turn left.")
             keyinput.release_key('s')
             keyinput.release_key('d')
             keyinput.press_key('a')
             
-        elif co[1][0] > co[0][0] and co[1][1]> co[0][1] and co[1][1] - co[0][1] > 55:
+        elif co[1][5] > co[1][17] and co[1][6]> co[1][18] and co[1][5] - co[1][17] > 55:
             print("Turn left.")
             keyinput.release_key('s')
             keyinput.release_key('d')
@@ -119,14 +119,14 @@ while cap.isOpened():
             
 
 
-        elif co[0][0] > co[1][0] and co[1][1]> co[0][1] and co[1][1] - co[0][1] > 55:
+        elif co[0][5] < co[0][17] and co[0][6]> co[0][18] and co[0][5] - co[0][17] > 55:
             print("Turn right.")
             keyinput.release_key('s')
             keyinput.release_key('a')
             keyinput.press_key('d')
             
 
-        elif co[1][0] > co[0][0] and co[0][1]> co[1][1] and co[0][1] - co[1][1] > 55:
+        elif co[0][5] < co[0][17] and co[0][6]> co[0][18] and co[0][5] - co[0][17] > 55:
             print("Turn right.")
             keyinput.release_key('s')
             keyinput.release_key('a')
